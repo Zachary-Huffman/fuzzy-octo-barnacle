@@ -2,6 +2,7 @@
 Submission for Java coding challenge
 
 ***Specifications***
+
 Create an application that uses a class that implements the provided interface. There are three functions that need to be implemented in the interface. The purpose of this interface is to supply different list sorting functionality. You may not import java.util.Arrays in your submission. All logic must be written by you using basic data types and structures only
 
     • You must receive the list you are operating on from the user in some way.
