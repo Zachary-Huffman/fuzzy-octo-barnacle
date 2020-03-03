@@ -4,5 +4,5 @@ Please choose an option from the list below:
 <2> Display the application's current list
 <3> Sort (Ascending or Descending)and print the list
 <4> Print sorted frequency of numbers in the list
-<5> Print number of unique falues inside the list
+<5> Print number of unique values inside the list
 <6> Exit the application

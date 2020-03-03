@@ -32,7 +32,7 @@ public class Driver {
 	        String[] userListSplit;
 	        Boolean order = true;
 	        int[] userListInt = null;
-	        int[] userListInt2 = {4, 5, 7, 3, 1, 7, 9};
+	        //int[] userListInt = {4, 5, 7, 3, 1, 7, 9};
 	        
 	        
 	        // Application welcome screen. From here user chooses desired function
@@ -51,17 +51,11 @@ public class Driver {
 		        	System.out.print(">");
 		        	userList = userInput.nextLine(); 
 		        	//split the user input regardless of use of commas or spaces (to an extent)
-		        	userListSplit = userList.split(",+\\s*|\\s+,*");
-		        	
-		        	
-		        	for (int z = 0; z < userListSplit.length; z++) {
-		        		System.out.println(userListSplit[z]);
-		        	}
+		        	userListSplit = userList.split(",+\\s*|\\s+,*");	
 		        	userListInt = new int[userListSplit.length];
-		        	System.out.println(userListSplit.length + " " + userListInt.length); 
-		            for (int i = 0; i < userList.length();i++) {
+		            for (int i = 0; i < userListSplit.length;i++) {
 		            	try {
-		            	userListInt[i] = Integer.valueOf(userListSplit[i]);
+		            		userListInt[i] = Integer.valueOf(userListSplit[i]);
 		            	}catch (Exception e) {
 		            		System.out.println("Invalid number of entered. Returning to main menu");
 		            		System.out.println(e.getMessage());
@@ -73,16 +67,16 @@ public class Driver {
 		        	
 		        	
 		        case "2": //Print out the current list
-		        	if (userListInt2 == null) { //tt
+		        	if (userListInt == null) { 
 		        		System.out.println("No list found.");
 		        		break;
 		        	}
-		        	ob.printList(userListInt2); //tt
+		        	ob.printList(userListInt); 
 		        	break;
 		        	
 		        	
 		        case "3": //Simple sort of either ascending or descending
-		        	if (userListInt2 == null) {//TT
+		        	if (userListInt == null) {
 		        		System.out.println("No list found.");
 		        		break;
 		        	}
@@ -94,9 +88,9 @@ public class Driver {
 		        		System.out.println("Invalid selection of "+option2+", returning to main menu");
 		        		break;
 		        	}
-		        	userListInt = ob.simpleSort(userListInt2, order); //tt
+		        	userListInt = ob.simpleSort(userListInt, order); 
 		        	System.out.println("Sorted array");
-		            ob.printList(userListInt2); //tt
+		            ob.printList(userListInt); 
 		        	break;
 		        	
 		        	
@@ -105,6 +99,7 @@ public class Driver {
 		        		System.out.println("No list found.");
 		        		break;
 		        	}
+		        	ob.printSortedFrequency(userListInt);
 		        	break;
 		        	
 		        	
@@ -113,7 +108,7 @@ public class Driver {
 		        		System.out.println("No list found.");
 		        		break;
 		        	}
-		        	int uniqueNum = ob.numberOfUniqueValues(userListInt2); //tt
+		        	int uniqueNum = ob.numberOfUniqueValues(userListInt); 
 		        	System.out.println("There are "+uniqueNum+" unique numbers in the list.");
 		        	break;
 		        	
