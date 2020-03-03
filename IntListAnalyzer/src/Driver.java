@@ -45,7 +45,6 @@ public class Driver {
 		        option = userInput.nextLine();
 		        switch(option) {
 		        
-		        
 		        case "1": //User input of a comma/white-space delimited list of integers
 		        	System.out.println("Please enter list of number separated by spaces or commas.");
 		        	System.out.print(">");
@@ -65,7 +64,6 @@ public class Driver {
 		            }
 		        	break;
 		        	
-		        	
 		        case "2": //Print out the current list
 		        	if (userListInt == null) { 
 		        		System.out.println("No list found.");
@@ -73,7 +71,6 @@ public class Driver {
 		        	}
 		        	ob.printList(userListInt); 
 		        	break;
-		        	
 		        	
 		        case "3": //Simple sort of either ascending or descending
 		        	if (userListInt == null) {
@@ -93,7 +90,6 @@ public class Driver {
 		            ob.printList(userListInt); 
 		        	break;
 		        	
-		        	
 		        case "4": //Print out frequency of unique integers in list, sorted ascending
 		        	if (userListInt == null) {
 		        		System.out.println("No list found.");
@@ -101,7 +97,6 @@ public class Driver {
 		        	}
 		        	ob.printSortedFrequency(userListInt);
 		        	break;
-		        	
 		        	
 		        case "5": // Print out the total number of unique integers in the list
 		        	if (userListInt == null) {
@@ -112,16 +107,13 @@ public class Driver {
 		        	System.out.println("There are "+uniqueNum+" unique numbers in the list.");
 		        	break;
 		        	
-		        	
 		        case "6": //Exit program
 		            System.out.println("Bye!");
 		            break;
 		            
-		            
 		        default:
 		        	System.out.println("Incorrect option, please try again.");
 		        	break;
-		        	
 		        	
 		        }//end switch
 		        System.out.println("Hit enter to continue.");

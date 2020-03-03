@@ -9,7 +9,7 @@ public class IntegerList implements SortChallenge
  *  numberOfUniqueValues
  * */	
 	
-	//Option 2
+	//Option 2 - Print list using for loop
 	void printList(int list[])
     {
         int n = list.length;
@@ -18,39 +18,39 @@ public class IntegerList implements SortChallenge
         System.out.println();
     }//end printList
 	
-	//Option 3
+	//Option 3 - Simple sort using bubble sorting
 	public int[] simpleSort(int[] list, boolean ascending) {
 		order = ascending;		
         int n = list.length;
         if (order) {
+        	//Ascending bubble sort
 	        for (int i = 0; i < n-1; i++) {
 	            for (int j = 0; j < n-i-1; j++) {
 	                if (list[j] > list[j+1])
-	                {
-	                    // swap temp and list[i]
+	                {  
 	                    int temp = list[j];
 	                    list[j] = list[j+1];
 	                    list[j+1] = temp;
 	                }
-	            }
-	        }
+	            }//end inner for
+	        }//end outer for
         } else {
+        	//Descending bubble sort
         	for (int i = 0; i < n-1; i++) {
 	            for (int j = 0; j < n-i-1; j++) {
 	                if (list[j] < list[j+1])
 	                {
-	                    // swap temp and list[i]
 	                    int temp = list[j];
 	                    list[j] = list[j+1];
 	                    list[j+1] = temp;
 	                }
-	            }
-	        }
-        }
+	            }//end inner for
+	        }//end outer for
+        }//end else
 		return list;
 	}//end simpleSort
 	
-	//Option 4
+	//Option 4 - Sorts and prints frequency of numbers
     public void printSortedFrequency(int[] list) {
     	int n = list.length;
     	int alreadyFound = -1;
@@ -70,17 +70,16 @@ public class IntegerList implements SortChallenge
         }//end outer for
     	
     	//Counting the frequencies
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++){
             int count = 1;
-            for(int j = i+1; j < n; j++){
+            for (int j = i+1; j < n; j++){
                 if(list[i] == list[j]){
                     count++;
                     //To avoid counting same element again
                     freq[j] = alreadyFound;
                 }
             }
-            if(freq[i] != alreadyFound)
-                freq[i] = count;
+            if(freq[i] != alreadyFound) freq[i] = count;
         }
         
         //Printing the frequencies
@@ -88,8 +87,6 @@ public class IntegerList implements SortChallenge
         	if (freq[i] != alreadyFound) 
         		System.out.println("Number "+list[i]+" found "+freq[i]+" times.");
         }
-        
-    	
     }//end SortedFrequency
     
     //Option 5
@@ -98,8 +95,7 @@ public class IntegerList implements SortChallenge
     	for (int i = 1; i < list.length; i++) {
     		int j = 0;
     		for (j = 0; j < i; j++) 
-    			if (list[i] == list[j])
-    				break;
+    			if (list[i] == list[j]) break;
     		if (i==j)
     			numUnique++;
     	}
