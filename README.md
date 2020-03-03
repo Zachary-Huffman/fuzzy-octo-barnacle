@@ -13,8 +13,10 @@ Create an application that uses a class that implements the provided interface. 
 
 ***How to Run***
 
-To run the program, download the .jar file from the files on the repository. Move this file to your desktop. Open to your desktop in CMD prompt and use following command to execute the .jar file:
+To run the program, download "IntListAnalyzer.jar" and "welcome.txt" from the IntListAnalyzer folder on the home page of repository. Move these files to your desktop. Open to your desktop in CMD prompt and use following command to execute the .jar file:
 
 java -jar IntListAnalyzer.jar
 
-**If this does not work, an update of JRE might be necessary.
+*When using the program, it will ask you to hit enter to transition screens :)
+
+**If this does not work, please try downloading "IntListAnalyzerV2.jar" instead. This jar file was compiled using compliency with earlier versions of the JRE.
