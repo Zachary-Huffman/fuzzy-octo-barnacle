@@ -1,4 +1,4 @@
-# fuzzy-octo-barnacle
+# zhuffman-code-challenge
 Submission for Java coding challenge
 
 ***Specifications***
