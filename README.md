@@ -17,6 +17,8 @@ To run the program, download "IntListAnalyzer.jar" and "welcome.txt" from the In
 
 java -jar IntListAnalyzer.jar
 
+Alternatively, there is also now a .exe file in the directory which (when moved to your desktop with the welcome.txt) can be ran by double clicking.
+
 *When using the program, it will ask you to hit enter to transition screens :)
 
 **If this does not work, please try downloading "IntListAnalyzerV2.jar" instead. This jar file was compiled using compliency with earlier versions of the JRE.
